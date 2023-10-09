@@ -10,6 +10,7 @@ RUN apt-get install -y git joe ccache
 RUN apt-get install -y libcurl4-gnutls-dev
 RUN apt-get install -y uuid-dev
 RUN apt-get install -y qt6-base-dev
+RUN apt-get install -y zlib1g-dev
 # add ccache to PATH
 ENV PATH /usr/lib/ccache:${PATH}
 
