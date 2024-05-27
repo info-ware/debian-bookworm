@@ -12,6 +12,15 @@ RUN apt-get install -y uuid-dev
 RUN apt-get install -y qt6-base-dev
 RUN apt-get install -y zlib1g-dev
 RUN apt-get install -y libxext-dev libz3-dev
+
+# Install wget, sudo, and .NET SDK 8.0
+RUN apt-get install -y wget  && \
+    wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
+    dpkg -i packages-microsoft-prod.deb && \
+    rm packages-microsoft-prod.deb && \
+    apt-get update && \
+    apt-get install -y dotnet-sdk-8.0
+
 # add ccache to PATH
 ENV PATH /usr/lib/ccache:${PATH}
 
