@@ -10,7 +10,7 @@ RUN apt-get install -y git joe ccache rsync
 RUN apt-get install -y libcurl4-gnutls-dev
 RUN apt-get install -y uuid-dev
 RUN apt-get install -y qt6-base-dev
-RUN apt-get install -y zlib1g-dev
+RUN apt-get install -y zlib1g-dev zip unzip
 RUN apt-get install -y libxext-dev libz3-dev
 
 # Install wget, sudo, and .NET SDK 8.0
